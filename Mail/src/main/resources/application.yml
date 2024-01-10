@@ -1,0 +1,42 @@
+server:
+  port: 10002
+
+# springdoc-openapi????
+# swagger api??
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.example.mail.Controller
+# knife4j???????????????
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
+spring:
+  mail:
+    #??smtp??????
+    # qq???smtp.qq.com          ???465?587
+    # sina    smtp.sina.cn
+    # aliyun  smtp.aliyun.com
+    # 163     smtp.163.com       ???465?994
+    host: smtp.qq.com
+    username: 2823189235@qq.com
+    # mrgiumfiogifbhdd wakiynsuabpnfaii  jszppzanikxvdccd
+    password: jszppzanikxvdccd
+    port: 587
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: false
+            required: false
+        debug: true
